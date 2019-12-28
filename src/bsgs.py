@@ -1,4 +1,4 @@
-from utils import phi , magic_number , get_indices
+from src import utils
 from math import ceil 
 
 """
@@ -8,10 +8,10 @@ from math import ceil
 
 """
 def bsgs(base , x , n):
-    m = ceil((phi(n)**0.5))
+    m = ceil((utils.phi(n)**0.5))
     giant_steps = [] 
     baby_steps = []
-    mc = magic_number(base,phi(n),m) 
+    mc = utils.magic_number(base,utils.phi(n),m) 
 
     for i in range(m): 
         gs = (base**i) % n 
@@ -21,7 +21,7 @@ def bsgs(base , x , n):
         bs = (x * (mc)**i) % n 
         baby_steps.append(bs)
 
-    return get_indices(giant_steps,baby_steps)
+    return utils.get_indices(giant_steps,baby_steps)
       
 
     

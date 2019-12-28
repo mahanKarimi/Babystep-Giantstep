@@ -7,7 +7,7 @@ The discrete logarithm of ``` 5 to base 2 in (Z*11,*) is 4, because 5 is congrue
 
 The discrete logarithm of ``` 3 to base 5 in (Z*2017,*) is 1030, because 3 is congruent modulo to 5^1030 mod 2017. ```
 
-This is because we write the exponent as x = i*m + j 
+This is because we write the exponent as x = i*m + j. With the algorithm BabyStepGiantStep we find out i and j.
 
 
 ## Unit Test 
